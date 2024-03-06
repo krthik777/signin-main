@@ -105,5 +105,28 @@
             </div>
         </div>
     </div>
+    <script>
+         function collect() {
+        confirm("proceed??");
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        alert("database is going to be updated with username: " + username + " and password: " + password );
+        fetch('http://localhost:5550', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username, password }),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Server response:', data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+    </script>
 </body>
 </html>
