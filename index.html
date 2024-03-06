@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+    </head>
+
+<body class="body">
+    <div class="container">
+        <div class="page" style="width: 450px; height: 500px;">
+            <h2 class="signin">SIGN IN</h2>
+            <div>
+                <div class="inputBox">
+                    <label
+                        style="align-self: center; font-family: Arial, Helvetica, sans-serif;font-size: large; background-color: rgb(174, 151, 237); border-radius: 6px; width: 100%;">
+                        Username </label>
+                    <br>
+                    <br>
+                    <input type="text" name="username" required id="username" placeholder="Enter username"
+                        style="font-size: medium;">
+                    <br>
+
+                </div>
+                <div class="inputBox">
+                    <label
+                        style="align-self: center; font-family: Arial, Helvetica, sans-serif;font-size: large; background-color: rgb(174, 151, 237); border-radius: 6px; width: 100%;">Password
+                    </label>
+                    <br>
+                    <br>
+                    <input type="password" name="password" id="password" placeholder="Enter password"
+                        style="font-size: medium;">
+
+                </div>
+                <span style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <input type="submit" id="submitb" onclick="collect()" value="Sign In"
+                        style="display: block; margin: auto;" class="submit">
+                    <p style="color: rgb(255, 255, 255); display: block; margin: 20px; background-color: black;">Don't
+                        have an account? <a href="#" style="color: aquamarine;">Sign Up</a></p>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
