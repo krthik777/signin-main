@@ -1,6 +1,6 @@
-// Description: This file contains the code to create a server that listens for POST requests and sends the username and password to a MongoDB database.
+// Description: This file contains the code to create a server that listens for POST requests and sends the username and password to a MongoDB database. So basically its a signup system.
 
-const host = "localhost"; //specify host 
+const  host = "localhost"; //specify host 
 const port = 5550;  //specify port number
 //required modules
 const { MongoClient } = require("mongodb");
@@ -71,12 +71,12 @@ async function send(username, password) {
 
     if (existingUser) {
       console.log(
-        `Username '${username}' already exists. Not sending to the database.`
+        `Username '${username}' already exists. Not signing up.`
       );
     } else {
-      // Insert the new user into the collection
+      // If new user not present Insert the new user into the collection
       await collection.insertOne({ "username": username, "password": password });
-      console.log(`Username '${username}' sent to the database.`);
+      console.log(`Username '${username}' wasn't there in the collection so the user name is added`);
     }
   } finally {
     console.log("done");
